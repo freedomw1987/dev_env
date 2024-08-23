@@ -44,6 +44,7 @@ nmap <leader>8 :tabn 8<CR>
 nmap <leader>9 :tabn 9<CR>
 nmap <leader>0 :tabn 10<CR>
 nmap <leader>x :tabclose<CR>
+nmap <leader>gg :FloatermNew lazygit<CR>
 nmap <C-s> :w<CR>
 
 
