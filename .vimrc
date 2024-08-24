@@ -1,4 +1,6 @@
+filetype plugin indent on " required"
 syntax on
+
 set hidden
 set encoding=UTF-8
 set noswapfile
@@ -8,6 +10,10 @@ set termguicolors
 set background=dark
 set mouse=a
 set shiftwidth=2
+set nocompatible
+set backspace=indent,eol,start
+set foldlevel=99 " Open all folds"
+set autoread
 
 
 " VIM Plug
@@ -16,8 +22,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mkitt/tabline.vim'
+Plug 'tpope/vim-surround'
+Plug 'chun-yang/auto-pairs'
 Plug 'tpope/vim-commentary'
+Plug 'pseewald/vim-anyfold'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -27,22 +35,26 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'yggdroot/indentline'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'haya14busa/incsearch.vim'
+" Language Syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-
-
-
-
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:tablineclosebutton=1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let NERDTreeMinimalUI=1
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', '@yaegassy/coc-tailwindcss3']
+let g:coc_global_extensions = ["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight"]
 
 " Keymap
 let g:mapleader=" "
@@ -83,10 +95,16 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
+" Search Highlight
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 colorscheme onedark
 
+" activate for all filetypes
+autocmd Filetype * AnyFoldActivate               
+autocmd VimEnter * NERDTree
 " Less compile
 autocmd FileWritePost,BufWritePost *.less :call LessCSSCompress()
 function! LessCSSCompress()
