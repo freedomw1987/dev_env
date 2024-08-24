@@ -25,6 +25,8 @@ Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'chun-yang/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'andrewradev/tagalong.vim'
 Plug 'tpope/vim-commentary'
 Plug 'pseewald/vim-anyfold'
 Plug 'ryanoasis/vim-devicons'
