@@ -40,6 +40,8 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
+
 
 call plug#end()
 

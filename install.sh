@@ -1,7 +1,7 @@
 #!/bin/bash
 
 brew install fzf bat ripgrep the_silver_searcher perl universal-ctags
-npm install -g lessc
+npm install -g lessc swagger-ui-watcher
 
 mkdir -p ~/.vim/pack/vendor/start
 
