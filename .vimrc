@@ -76,7 +76,7 @@ nmap <leader>8 :tabn 8<CR>
 nmap <leader>9 :tabn 9<CR>
 nmap <leader>0 :tabn 10<CR>
 nmap <leader>x :tabclose<CR>
-nmap <leader>gg :FloatermNew --height=0.8 --width=0.9 lazygit<CR>
+nmap <leader>gg :FloatermNew --height=1.0 --width=1.0 --floaterm_title='LazyGit' lazygit<CR>
 nmap <C-s> :w<CR>
 nmap <leader>ff :GFiles<CR>
 nmap <leader>fw :Ag<CR>
