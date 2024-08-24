@@ -36,11 +36,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'yggdroot/indentline'
 Plug 'haya14busa/incsearch.vim'
+Plug 'Exafunction/codeium.vim'
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
+Plug 'ap/vim-css-color'
 
 
 call plug#end()
@@ -57,6 +59,8 @@ let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let NERDTreeMinimalUI=1
 let g:coc_global_extensions = ["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight"]
+let g:codeium_disable_bindings = 1
+
 
 " Keymap
 let g:mapleader=" "
@@ -101,6 +105,19 @@ nmap <silent> gr <Plug>(coc-references)
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+" Codeium
+imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+imap <script><silent><nowait><expr> <C-h> codeium#AcceptNextWord()
+imap <script><silent><nowait><expr> <C-j> codeium#AcceptNextLine()
+imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+imap <C-x>   <Cmd>call codeium#Clear()<CR>
+"Move lines
+nmap K <Cmd>m .-2<CR>==
+nmap J <Cmd>m .+1<CR>==
+vmap K :m '<-2<CR>gv=gv
+vmap J :m '>+1<CR>gv=gv
+inoremap jk <Esc>
 
 colorscheme onedark
 
