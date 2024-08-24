@@ -9,6 +9,7 @@ set background=dark
 set mouse=a
 set shiftwidth=2
 
+
 " VIM Plug
 call plug#begin()
 Plug 'joshdick/onedark.vim'
