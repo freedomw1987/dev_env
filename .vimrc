@@ -42,6 +42,9 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'Exafunction/codeium.vim'
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'"
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
