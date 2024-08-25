@@ -1,4 +1,4 @@
-filetype plugin indent on " required"
+filetype plugin indent on "required
 syntax on
 
 set hidden
@@ -12,7 +12,7 @@ set mouse=a
 set shiftwidth=2
 set nocompatible
 set backspace=indent,eol,start
-set foldlevel=99 " Open all folds"
+set foldlevel=99 "Open all folds
 set autoread
 set cursorline
 
@@ -53,19 +53,19 @@ Plug 'ap/vim-css-color'
 
 call plug#end()
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+let &t_SI="\e[6 q"
+let &t_EI="\e[2 q"
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_buffers=0
+let g:airline#extensions#tabline#show_tabs=1
+let g:airline#extensions#tabline#tab_nr_type=1
 let g:tablineclosebutton=1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
-let g:coc_global_extensions = ["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight"]
-let g:codeium_disable_bindings = 1
+let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight"]
+let g:codeium_disable_bindings=1
 
 
 " Keymap
@@ -107,6 +107,11 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " Search Highlight
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
