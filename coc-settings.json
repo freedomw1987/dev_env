@@ -1,0 +1,12 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "graphql",
+    "handlebars"
+  ],
+  "tailwindCSS.headwind.runOnSave": true
+}
