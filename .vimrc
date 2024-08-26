@@ -15,6 +15,8 @@ set backspace=indent,eol,start
 set foldlevel=99 "Open all folds
 set autoread
 set cursorline
+set clipboard+=unnamedplus
+
 
 
 " VIM Plug
@@ -129,6 +131,8 @@ nmap J <Cmd>m .+1<CR>==
 vmap K :m '<-2<CR>gv=gv
 vmap J :m '>+1<CR>gv=gv
 inoremap jk <Esc>
+vnoremap <C-c> "+y
+
 
 colorscheme onedark
 
