@@ -131,7 +131,7 @@ nmap J <Cmd>m .+1<CR>==
 vmap K :m '<-2<CR>gv=gv
 vmap J :m '>+1<CR>gv=gv
 inoremap jk <Esc>
-" vnoremap <C-c> "+y
+vnoremap <C-c> "+y
 
 
 colorscheme onedark
