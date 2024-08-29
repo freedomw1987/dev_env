@@ -68,6 +68,8 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
 let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight"]
 let g:codeium_disable_bindings=1
+let g:fzf_action = { 'enter': 'tab split'  }
+
 
 
 " Keymap
