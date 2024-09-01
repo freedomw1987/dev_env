@@ -1,5 +1,6 @@
 filetype plugin indent on "required
 syntax on
+syntax sync minlines=10000
 
 set hidden
 set encoding=UTF-8
@@ -16,6 +17,7 @@ set foldlevel=99 "Open all folds
 set autoread
 set cursorline
 set synmaxcol=0
+
 " set clipboard+=unnamedplus
 
 
