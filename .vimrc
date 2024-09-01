@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 set foldlevel=99 "Open all folds
 set autoread
 set cursorline
+set synmaxcol=0
 " set clipboard+=unnamedplus
 
 
@@ -51,6 +52,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 Plug 'ap/vim-css-color'
+Plug 'StanAngeloff/php.vim'
+
 
 
 call plug#end()
@@ -66,10 +69,10 @@ let g:airline#extensions#tabline#tab_nr_type=1
 let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
-let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight"]
+let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight","coc-ci","coc-syntax","coc-html"]
 let g:codeium_disable_bindings=1
 let g:fzf_action = { 'enter': 'tab split'  }
-
+let php_htmlInStrings = 1
 
 
 " Keymap
@@ -138,6 +141,8 @@ vnoremap <C-c> "+y
 
 colorscheme onedark
 
+" nerdtree synchronize cwd
+autocmd BufEnter * lcd %:p:h
 " activate for all filetypes
 autocmd Filetype * AnyFoldActivate               
 autocmd VimEnter * NERDTree
@@ -150,3 +155,4 @@ function! LessCSSCompress()
     cal system('lessc '.cwd.'/'.name.'.less > '.cwd.'/'.name.'.css &')
   endif
 endfunction
+
