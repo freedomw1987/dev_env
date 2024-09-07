@@ -1,6 +1,6 @@
 filetype plugin indent on "required
 syntax on
-syntax sync minlines=10000
+syntax sync minlines=20000
 
 set hidden
 set encoding=UTF-8
@@ -143,8 +143,6 @@ vnoremap <C-c> "+y
 
 colorscheme onedark
 
-" nerdtree synchronize cwd
-autocmd BufEnter * lcd %:p:h
 " activate for all filetypes
 autocmd Filetype * AnyFoldActivate               
 autocmd VimEnter * NERDTree
