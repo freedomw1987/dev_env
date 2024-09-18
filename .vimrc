@@ -29,8 +29,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
-Plug 'chun-yang/auto-pairs'
-Plug 'alvan/vim-closetag'
 Plug 'andrewradev/tagalong.vim'
 Plug 'tpope/vim-commentary'
 Plug 'pseewald/vim-anyfold'
@@ -49,13 +47,14 @@ Plug 'Exafunction/codeium.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
 Plug 'jparise/vim-graphql'"
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 Plug 'ap/vim-css-color'
 Plug 'StanAngeloff/php.vim'
-
+Plug 'mattn/emmet-vim'
 
 
 call plug#end()
@@ -79,6 +78,7 @@ let php_htmlInStrings = 1
 
 " Keymap
 let g:mapleader=" "
+let g:user_emmet_leader_key=','
 
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>to :tabnew<CR>
