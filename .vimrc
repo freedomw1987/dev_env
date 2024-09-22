@@ -55,6 +55,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for':
 Plug 'ap/vim-css-color'
 Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
+Plug 'mattn/webapi-vim'
 
 
 call plug#end()
@@ -79,6 +80,7 @@ let php_htmlInStrings = 1
 " Keymap
 let g:mapleader=" "
 let g:user_emmet_leader_key=','
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/www/dev_env/.snippets.json')), "\n"))
 
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>to :tabnew<CR>

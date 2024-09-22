@@ -1,0 +1,8 @@
+{
+  "variables": { "name": "Component" },
+  "typescriptreact": {
+    "snippets": {
+      "rcc": "import React from \"react\";\n\nconst ${name} : React.FC = () => {\n  return <></>\n};\n\nexport default ${name};"
+    }
+  }
+}
