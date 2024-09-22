@@ -1,6 +1,8 @@
 filetype plugin indent on "required
 syntax on
+set redrawtime=10000
 syntax sync minlines=10000
+syntax sync fromstart
 
 set hidden
 set encoding=UTF-8
@@ -150,6 +152,7 @@ autocmd BufEnter * lcd %:p:h
 " activate for all filetypes
 autocmd Filetype * AnyFoldActivate               
 autocmd VimEnter * NERDTree
+autocmd BufEnter * :syntax sync fromstart
 " Less compile
 autocmd FileWritePost,BufWritePost *.less :call LessCSSCompress()
 function! LessCSSCompress()
