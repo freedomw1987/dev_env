@@ -46,6 +46,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'yggdroot/indentline'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Exafunction/codeium.vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'    " JavaScript support
