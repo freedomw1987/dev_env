@@ -23,9 +23,9 @@ set synmaxcol=0
 " set clipboard+=unnamedplus
 
 
-
 " VIM Plug
 call plug#begin()
+Plug 'jremmen/vim-ripgrep'
 Plug 'joshdick/onedark.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/NERDTree'
@@ -73,7 +73,7 @@ let g:airline#extensions#tabline#tab_nr_type=1
 let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
-let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight","coc-ci","coc-syntax","coc-html"]
+let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight","coc-ci","coc-syntax","coc-html", "coc-snippets"]
 let g:codeium_disable_bindings=1
 let g:fzf_action = { 'enter': 'tab split'  }
 let php_htmlInStrings = 1
@@ -124,6 +124,9 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Search
+nmap <leader>rg :Rg<CR>
 
 " Search Highlight
 map /  <Plug>(incsearch-forward)
