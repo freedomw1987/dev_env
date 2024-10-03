@@ -149,6 +149,7 @@ vmap K :m '<-2<CR>gv=gv
 vmap J :m '>+1<CR>gv=gv
 inoremap jk <Esc>
 vnoremap <C-c> "+y
+map <C-p> "+p
 
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
