@@ -52,7 +52,6 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'Exafunction/codeium.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dense-analysis/ale'
-Plug 'wfxr/minimap.vim'
 
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
@@ -92,10 +91,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
-let g:minimap_git_colors = 1
 
 
 " Keymap
@@ -212,5 +207,5 @@ function! LessCSSCompress()
   endif
 endfunction
 
-autocmd BufWinLeave * MinimapClose
+" autocmd BufWinLeave * MinimapToggle
 
