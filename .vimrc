@@ -52,6 +52,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'Exafunction/codeium.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dense-analysis/ale'
+Plug 'wfxr/minimap.vim'
 
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
@@ -91,6 +92,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_git_colors = 1
 
 
 " Keymap
@@ -162,8 +167,6 @@ inoremap jk <Esc>
 " copy and paste to clipboard
 vnoremap <C-c> "+y
 map <C-p> "+p
-" Open quickfix
-nmap <C-l> :lopen<CR>
 
 " Easymotion
 " <Leader>f{char} to move to {char}
@@ -208,4 +211,6 @@ function! LessCSSCompress()
     cal system('lessc '.cwd.'/'.name.'.less > '.cwd.'/'.name.'.css &')
   endif
 endfunction
+
+autocmd BufWinLeave * MinimapClose
 
