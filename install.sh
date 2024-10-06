@@ -10,6 +10,20 @@ mkdir -p ~/.vim/pack/vendor/start
 # Install Vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Install Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Install vim-sensible
+cd ~/.vim/bundle && \
+git clone https://github.com/tpope/vim-sensible.git
+
+# Install vim-syntastic
+cd ~/.vim/bundle && \	
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
+
+
 # Install Color-theme
 git clone https://github.com/lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
 

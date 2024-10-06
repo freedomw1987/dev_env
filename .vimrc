@@ -1,3 +1,4 @@
+execute pathogen#infect()
 filetype plugin indent on "required
 syntax on
 set redrawtime=10000
@@ -19,6 +20,9 @@ set foldlevel=99 "Open all folds
 set autoread
 set cursorline
 set synmaxcol=0
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " set clipboard+=unnamedplus
 
@@ -47,6 +51,7 @@ Plug 'yggdroot/indentline'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Exafunction/codeium.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'dense-analysis/ale'
 
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
@@ -61,9 +66,8 @@ Plug 'ap/vim-css-color'
 Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
-
-
 call plug#end()
+
 
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -81,6 +85,13 @@ let g:codeium_disable_bindings=1
 let g:fzf_action = { 'enter': 'tab split'  }
 let php_htmlInStrings = 1
 
+let g:ale_completion_enabled = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+
 
 " Keymap
 let g:mapleader=" "
@@ -90,7 +101,7 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/www/dev_e
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>to :tabnew<CR>
 nmap <tab> :tabnext<CR>
-nmap <S-tab> :tabprevious<CR>
+nmap <S-tab> :tabprevicus<CR>
 nmap <leader>1 :tabn 1<CR>
 nmap <leader>2 :tabn 2<CR>
 nmap <leader>3 :tabn 3<CR>
@@ -148,9 +159,13 @@ nmap J <Cmd>m .+1<CR>==
 vmap K :m '<-2<CR>gv=gv
 vmap J :m '>+1<CR>gv=gv
 inoremap jk <Esc>
+" copy and paste to clipboard
 vnoremap <C-c> "+y
 map <C-p> "+p
+" Open quickfix
+nmap <C-l> :lopen<CR>
 
+" Easymotion
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
