@@ -22,8 +22,6 @@ git clone https://github.com/tpope/vim-sensible.git
 cd ~/.vim/bundle && \	
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
-
-
 # Install Color-theme
 git clone https://github.com/lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
 
