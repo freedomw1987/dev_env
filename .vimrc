@@ -218,6 +218,3 @@ function! LessCSSCompress()
     cal system('lessc '.cwd.'/'.name.'.less > '.cwd.'/'.name.'.css &')
   endif
 endfunction
-
-" autocmd BufWinLeave * MinimapToggle
-
