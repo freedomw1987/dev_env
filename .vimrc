@@ -66,6 +66,7 @@ Plug 'ap/vim-css-color'
 Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
+Plug 'prisma/vim-prisma'
 call plug#end()
 
 
