@@ -9,5 +9,6 @@
     "handlebars",
     "less"
   ],
-  "tailwindCSS.headwind.runOnSave": true
+  "tailwindCSS.headwind.runOnSave": true,
+  "snippets.ultisnips.pythonPrompt": false
 }

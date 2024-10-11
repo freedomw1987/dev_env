@@ -29,6 +29,7 @@ set statusline+=%*
 
 " VIM Plug
 call plug#begin()
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'joshdick/onedark.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/NERDTree'
@@ -81,7 +82,17 @@ let g:airline#extensions#tabline#tab_nr_type=1
 let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
-let g:coc_global_extensions=["coc-prettier","coc-tsserver","@yaegassy/coc-tailwindcss3","coc-highlight","coc-ci","coc-syntax","coc-html", "coc-snippets"]
+let g:coc_global_extensions= [
+                  \"coc-prettier",
+                  \"coc-tsserver",
+                  \"@yaegassy/coc-tailwindcss3",
+                  \"coc-highlight",
+                  \"coc-ci",
+                  \"coc-syntax",
+                  \"coc-html", 
+                  \"coc-snippets", 
+                  \"coc-prisma"
+                  \]
 let g:codeium_disable_bindings=1
 let g:fzf_action = { 'enter': 'tab split'  }
 let php_htmlInStrings = 1
@@ -190,7 +201,7 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
-colorscheme onedark
+colorscheme catppuccin_mocha
 
 " nerdtree synchronize cwd
 autocmd BufEnter * lcd %:p:h
