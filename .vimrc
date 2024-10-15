@@ -91,7 +91,8 @@ let g:coc_global_extensions= [
                   \"coc-syntax",
                   \"coc-html", 
                   \"coc-snippets", 
-                  \"coc-prisma"
+                  \"coc-prisma",
+                  \"coc-docker"
                   \]
 let g:codeium_disable_bindings=1
 let g:fzf_action = { 'enter': 'tab split'  }
