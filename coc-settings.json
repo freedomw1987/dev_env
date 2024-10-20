@@ -7,7 +7,8 @@
     "json",
     "graphql",
     "handlebars",
-    "less"
+    "less",
+    "prisma"
   ],
   "tailwindCSS.headwind.runOnSave": true,
   "snippets.ultisnips.pythonPrompt": false

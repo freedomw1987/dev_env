@@ -68,6 +68,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
 Plug 'prisma/vim-prisma'
+Plug 'uarun/vim-protobuf'
 call plug#end()
 
 
