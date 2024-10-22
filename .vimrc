@@ -221,6 +221,7 @@ augroup autoformat_settings
   autocmd FileType c,cpp,proto,java,javascript,typescript AutoFormatBuffer clang-format
   autocmd FileType javascriptreact,typescriptreact AutoFormatBuffer prettier
   autocmd FileType css,less,scss AutoFormatBuffer js-beautify 
+  autocmd FileType sh AutoFormatBuffer shfmt
 augroup END
 " Less compile
 autocmd FileWritePost,BufWritePost *.less :call LessCSSCompress()
