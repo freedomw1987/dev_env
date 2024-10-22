@@ -53,6 +53,9 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'Exafunction/codeium.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dense-analysis/ale'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
@@ -71,6 +74,9 @@ Plug 'prisma/vim-prisma'
 Plug 'uarun/vim-protobuf'
 call plug#end()
 
+call glaive#Install()
+Glaive codefmt plugin[mappings]
+
 
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -84,7 +90,6 @@ let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
 let g:coc_global_extensions= [
-                  \"coc-prettier",
                   \"coc-tsserver",
                   \"@yaegassy/coc-tailwindcss3",
                   \"coc-highlight",
@@ -213,6 +218,11 @@ autocmd BufEnter * lcd %:p:h
 autocmd Filetype * AnyFoldActivate               
 autocmd VimEnter * NERDTree
 autocmd BufEnter * :syntax sync fromstart
+augroup autoformat_settings
+  autocmd FileType c,cpp,proto,java,javascript,typescript AutoFormatBuffer clang-format
+  autocmd FileType javascriptreact,typescriptreact AutoFormatBuffer prettier
+  autocmd FileType css,less,scss AutoFormatBuffer js-beautify 
+augroup END
 " Less compile
 autocmd FileWritePost,BufWritePost *.less :call LessCSSCompress()
 function! LessCSSCompress()
