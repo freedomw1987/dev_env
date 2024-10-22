@@ -218,9 +218,10 @@ autocmd Filetype * AnyFoldActivate
 autocmd VimEnter * NERDTree
 autocmd BufEnter * :syntax sync fromstart
 augroup autoformat_settings
-  autocmd FileType c,cpp,proto,java,javascript,typescript AutoFormatBuffer clang-format
+  autocmd FileType c,cpp,proto,java AutoFormatBuffer clang-format
   autocmd FileType javascriptreact,typescriptreact AutoFormatBuffer prettier
   autocmd FileType css,less,scss AutoFormatBuffer js-beautify 
+  autocmd FileType yaml,yml AutoFormatBuffer yamlfmt
   autocmd FileType sh AutoFormatBuffer shfmt
 augroup END
 " Less compile

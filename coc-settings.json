@@ -2,14 +2,14 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
-    "typescript",
     "typescriptreact",
+    "typescript",
     "json",
     "graphql",
     "handlebars",
     "less",
     "prisma",
-    "proto",
+    "proto"
   ],
   "tailwindCSS.headwind.runOnSave": true,
   "snippets.ultisnips.pythonPrompt": false
