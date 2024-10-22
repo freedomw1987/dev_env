@@ -94,6 +94,7 @@ let g:coc_global_extensions= [
                   \"coc-snippets", 
                   \"coc-prisma",
                   \"coc-docker",
+                  \"coc-protobuf",
                   \"@onichandame/coc-proto3"
                   \]
 let g:codeium_disable_bindings=1
