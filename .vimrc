@@ -99,10 +99,9 @@ let g:coc_global_extensions= [
                   \"coc-snippets", 
                   \"coc-prisma",
                   \"coc-docker",
-                  \"@onichandame/coc-proto3"
                   \]
 let g:codeium_disable_bindings=1
-let g:fzf_action = { 'enter': 'tab split'  }
+" let g:fzf_action = { 'enter': 'tab split'  }
 let php_htmlInStrings = 1
 
 let g:ale_completion_enabled = 0
@@ -119,6 +118,11 @@ let g:user_emmet_leader_key=','
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/www/dev_env/.snippets.json')), "\n"))
 
 nmap <leader>e :NERDTreeToggle<CR>
+" Vsplit
+nmap <leader>vs :vsplit<CR>
+nmap <leader>hs :split<CR>
+nmap <leader>x :close<CR>
+" Tabs
 nmap <leader>to :tabnew<CR>
 nmap <tab> :tabnext<CR>
 nmap <S-tab> :tabprevicus<CR>
@@ -133,6 +137,7 @@ nmap <leader>8 :tabn 8<CR>
 nmap <leader>9 :tabn 9<CR>
 nmap <leader>0 :tabn 10<CR>
 nmap <leader>x :tabclose<CR>
+" Floaterm for git
 nmap <leader>gg :FloatermNew --height=1.0 --width=1.0 --floaterm_title='LazyGit' lazygit<CR>
 nmap <C-s> :w<CR>
 nmap <leader>ff :GFiles<CR>
@@ -219,9 +224,8 @@ autocmd VimEnter * NERDTree
 autocmd BufEnter * :syntax sync fromstart
 augroup autoformat_settings
   autocmd FileType c,cpp,proto,java AutoFormatBuffer clang-format
-  autocmd FileType javascriptreact,typescriptreact AutoFormatBuffer prettier
+  autocmd FileType javascriptreact,typescriptreact,yaml AutoFormatBuffer prettier
   autocmd FileType css,less,scss AutoFormatBuffer js-beautify 
-  autocmd FileType yaml,yml AutoFormatBuffer yamlfmt
   autocmd FileType sh AutoFormatBuffer shfmt
 augroup END
 " Less compile
