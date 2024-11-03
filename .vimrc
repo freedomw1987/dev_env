@@ -216,8 +216,6 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 colorscheme catppuccin_mocha
 
-" nerdtree synchronize cwd
-autocmd BufEnter * lcd %:p:h
 " activate for all filetypes
 autocmd Filetype * AnyFoldActivate               
 autocmd VimEnter * NERDTree
