@@ -1,7 +1,7 @@
 #!/bin/bash
 
 brew install fzf bat ripgrep the_silver_searcher perl universal-ctags tmux vim git koekeishiya/formulae/yabai koekeishiya/formulae/skhd
-brew install clang-format js-beautify shfmt yamlfmt
+brew install clang-format js-beautify shfmt yamlfmt stylelint prettier htmlq
 sudo npm install -g lessc swagger-ui-watcher
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
