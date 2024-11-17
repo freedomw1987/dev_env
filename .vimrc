@@ -128,7 +128,11 @@ let g:mapleader=" "
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/www/dev_env/.snippets.json')), "\n"))
 
+" NERDTree
 nmap <leader>e :NERDTreeToggle<CR>
+nmap <M-Left>  :vertical resize +2<CR>
+nmap <M-Right> :vertical resize -2<CR>
+
 " Vsplit
 nmap <leader>vs :vsplit<CR>
 nmap <leader>hs :split<CR>
