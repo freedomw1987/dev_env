@@ -12,5 +12,6 @@
     "proto"
   ],
   "tailwindCSS.headwind.runOnSave": true,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "colors.enable": true
 }
