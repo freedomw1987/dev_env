@@ -130,8 +130,8 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/www/dev_e
 
 " NERDTree
 nmap <leader>e :NERDTreeToggle<CR>
-nmap <M-Left>  :vertical resize +2<CR>
-nmap <M-Right> :vertical resize -2<CR>
+nmap <leader><Left>  :vertical resize +2<CR>
+nmap <leader><Right> :vertical resize -2<CR>
 
 " Vsplit
 nmap <leader>vs :vsplit<CR>
