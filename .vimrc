@@ -57,26 +57,29 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
+
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
-Plug 'jparise/vim-graphql'"
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'jparise/vim-graphql' " GraphQL syntax
+Plug 'peitalin/vim-jsx-typescript' " JSX and TS syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color' " CSS Color Preview
 Plug 'StanAngeloff/php.vim'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim' " HTML, CSS, and JavaScript Emmet support
 Plug 'mattn/webapi-vim'
-Plug 'prisma/vim-prisma'
-Plug 'uarun/vim-protobuf'
+Plug 'prisma/vim-prisma' " Prisma support
+Plug 'uarun/vim-protobuf' " Protobuf support
+Plug 'dart-lang/dart-vim-plugin' " Dart support
+Plug 'thosakwe/vim-flutter' " Flutter support
 call plug#end()
 
+" Enable Glaive to support Codefmt
 call glaive#Install()
 Glaive codefmt plugin[mappings]
-
 
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
