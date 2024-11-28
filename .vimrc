@@ -92,6 +92,7 @@ let g:airline#extensions#tabline#tab_nr_type=1
 let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
+let g:NERDTreeWinPos="right"
 let g:coc_global_extensions= [
                   \"coc-tsserver",
                   \"@yaegassy/coc-tailwindcss3",
@@ -237,7 +238,7 @@ colorscheme catppuccin_mocha
 
 " activate for all filetypes
 autocmd Filetype * AnyFoldActivate               
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 autocmd BufEnter * :syntax sync fromstart
 augroup autoformat_settings
   autocmd FileType c,cpp,proto,java AutoFormatBuffer clang-format
