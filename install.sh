@@ -1,6 +1,6 @@
 #!/bin/bash
 
-brew install fzf bat ripgrep the_silver_searcher perl universal-ctags tmux vim git koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+brew install fzf bat ripgrep the_silver_searcher perl universal-ctags tmux vim neovim git koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 brew install clang-format js-beautify shfmt yamlfmt stylelint prettier htmlq
 sudo npm install -g lessc swagger-ui-watcher
 
@@ -10,6 +10,8 @@ mkdir -p ~/.vim/pack/vendor/start
 
 # Install Vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle &&
@@ -35,6 +37,14 @@ ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/yabai/yabairc ~/.yabairc
 
 ln -s $(pwd)/skhd/skhdrc ~/.skhdrc
+
+if [ ! -f ~/.config]; then
+  mkdir -p ~/.config
+fi
+if [ ! -f ~/.config/nvim ]; then
+  ln -s ~/.vim ~/.config/nvim
+  ln -s $(pwd)/nvim/init.lua ~/.config/nvim/init.lua
+fi
 
 tmux source ~/.tmux.conf
 

@@ -20,6 +20,7 @@ set foldlevel=99 "Open all folds
 set autoread
 set cursorline
 set synmaxcol=0
+set laststatus=3
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -28,7 +29,7 @@ set statusline+=%*
 
 
 " VIM Plug
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'joshdick/onedark.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -255,3 +256,4 @@ function! LessCSSCompress()
     cal system('lessc '.cwd.'/'.name.'.less > '.cwd.'/'.name.'.css &')
   endif
 endfunction
+
