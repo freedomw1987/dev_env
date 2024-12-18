@@ -58,7 +58,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-
 " Language Syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'    " JavaScript support
@@ -76,6 +75,20 @@ Plug 'prisma/vim-prisma' " Prisma support
 Plug 'uarun/vim-protobuf' " Protobuf support
 Plug 'dart-lang/dart-vim-plugin' " Dart support
 Plug 'thosakwe/vim-flutter' " Flutter support
+
+" Avante
+Plug 'stevearc/dressing.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+" Optional deps
+Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-tree/nvim-web-devicons' 
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
+
+" Yay, pass source=true if you want to build from source
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+
 call plug#end()
 
 " Enable Glaive to support Codefmt
@@ -93,7 +106,7 @@ let g:airline#extensions#tabline#tab_nr_type=1
 let g:tablineclosebutton=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let NERDTreeMinimalUI=1
-let g:NERDTreeWinPos="right"
+let g:NERDTreeWinPos="left"
 let g:coc_global_extensions= [
                   \"coc-tsserver",
                   \"@yaegassy/coc-tailwindcss3",
@@ -243,7 +256,7 @@ autocmd Filetype * AnyFoldActivate
 autocmd BufEnter * :syntax sync fromstart
 augroup autoformat_settings
   autocmd FileType c,cpp,proto,java AutoFormatBuffer clang-format
-  autocmd FileType javascriptreact,typescriptreact,yaml AutoFormatBuffer prettier
+  autocmd FileType javascriptreact,typescriptreact,yaml,lua AutoFormatBuffer prettier
   autocmd FileType css,less,scss AutoFormatBuffer js-beautify 
   autocmd FileType sh AutoFormatBuffer shfmt
 augroup END
