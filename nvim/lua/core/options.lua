@@ -1,6 +1,6 @@
 local o = vim.o
-local g = vim.g       -- Global variables
-local opt = vim.opt   -- Set options (global/buffer/windows-scoped
+local g = vim.g     -- Global variables
+local opt = vim.opt -- Set options (global/buffer/windows-scoped
 
 opt.redrawtime = 10000
 opt.hidden = true
@@ -29,4 +29,3 @@ vim.cmd('filetype plugin indent on')
 vim.cmd('syntax on')
 vim.cmd('syntax sync minlines=10000')
 vim.cmd('syntax sync fromstart')
-
