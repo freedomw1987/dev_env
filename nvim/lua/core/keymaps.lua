@@ -20,14 +20,6 @@ local function vmap(lhs, rhs, opts)
   map('v', lhs, rhs, opts)
 end
 
-local function CheckBackspace()
-  local col = vim.fn.col('.') - 1
-  if col == 0 then
-    return true
-  else
-    return vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
-  end
-end
 
 vim.g.mapleader = ' '
 
@@ -62,38 +54,11 @@ map('n', '<leader>gg', ':FloatermNew --height=1.0 --width=1.0  lazygit<CR>')
 nmap('<leader>ff', ':GFiles<CR>')
 nmap('<leader>fw', ':Ag<CR>')
 
-
--- Coc
-vim.keymap.set('i', '<Tab>',
-  function()
-    if vim.fn['coc#pum#visible']() == 1 then
-      return vim.fn['coc#pum#next'](1)
-    elseif CheckBackspace() then
-      return "\t"
-    else
-      return vim.fn['coc#refresh']()
-    end
-  end,
-  { noremap = true, silent = true, expr = true }
-)
-imap('<S-TAB>', 'coc#pum#visible() ? coc#pum#prev(1) : "<C-h>"', { silent = true, expr = true, noremap = true })
-imap('<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', { silent = true, expr = true, noremap = true })
-nmap('gd', '<Plug>(coc-definition)', { silent = true })
-nmap('gy', '<Plug>(coc-type-definition)', { silent = true })
-nmap('gi', '<Plug>(coc-implementation)', { silent = true })
-nmap('gr', '<Plug>(coc-references)', { silent = true })
--- Remap keys for applying codeAction to the current line.
-nmap('<leader>ac', '<Plug>(coc-codeaction)', { silent = true })
--- Apply AutoFix to problem on the current line.
-nmap('<leader>qf', '<Plug>(coc-fix-current)', { silent = true })
--- Run the Code Lens action on the current line.
-nmap('<leader>cl', '<Plug>(coc-codelens-action)', { silent = true })
-
 -- Search
 nmap('<leader>rg', ':Rg<CR>')
-vim.api.nvim_set_keymap('', '/', '<Plug>(incsearch-forward)', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('', '?', '<Plug>(incsearch-backward)', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('', 'g/', '<Plug>(incsearch-stay)', { noremap = true, silent = true })
+vim.keymap.set('', '/', '<Plug>(incsearch-forward)', { noremap = true, silent = true })
+vim.keymap.set('', '?', '<Plug>(incsearch-backward)', { noremap = true, silent = true })
+vim.keymap.set('', 'g/', '<Plug>(incsearch-stay)', { noremap = true, silent = true })
 
 -- Codeium
 map('i', '<C-g>', 'codeium#Accept()', { expr = true, silent = true, nowait = true, script = true })

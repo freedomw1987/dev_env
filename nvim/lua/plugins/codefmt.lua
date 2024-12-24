@@ -4,5 +4,4 @@ return {
     'google/vim-maktaba',
     'google/vim-glaive'
   },
-
 }
