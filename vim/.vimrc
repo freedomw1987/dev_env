@@ -29,71 +29,15 @@ set statusline+=%*
 
 
 " VIM Plug
-call plug#begin('~/.vim/plugged')
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-Plug 'joshdick/onedark.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'preservim/NERDTree'
-Plug 'jremmen/vim-ripgrep'
-Plug 'easymotion/vim-easymotion'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-surround'
-Plug 'andrewradev/tagalong.vim'
-Plug 'tpope/vim-commentary'
-Plug 'pseewald/vim-anyfold'
-Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'voldikss/vim-floaterm'
-Plug 'airblade/vim-gitgutter'
-Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'yggdroot/indentline'
-Plug 'haya14busa/incsearch.vim'
-Plug 'Exafunction/codeium.vim'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'dense-analysis/ale'
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
 
-" Language Syntax
-Plug 'leafgarland/typescript-vim'
-Plug 'pangloss/vim-javascript'    " JavaScript support
-Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
-Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
-Plug 'jparise/vim-graphql' " GraphQL syntax
-Plug 'peitalin/vim-jsx-typescript' " JSX and TS syntax
+call plug#begin()
+source ~/.vim/plug.vim
 Plug 'sheerun/vim-polyglot'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
-Plug 'ap/vim-css-color' " CSS Color Preview
-Plug 'StanAngeloff/php.vim'
-Plug 'mattn/emmet-vim' " HTML, CSS, and JavaScript Emmet support
-Plug 'mattn/webapi-vim'
-Plug 'prisma/vim-prisma' " Prisma support
-Plug 'uarun/vim-protobuf' " Protobuf support
-Plug 'dart-lang/dart-vim-plugin' " Dart support
-Plug 'thosakwe/vim-flutter' " Flutter support
-
-" Avante
-Plug 'stevearc/dressing.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'MunifTanjim/nui.nvim'
-" Optional deps
-Plug 'hrsh7th/nvim-cmp'
-Plug 'nvim-tree/nvim-web-devicons' 
-Plug 'HakonHarnes/img-clip.nvim'
-Plug 'zbirenbaum/copilot.lua'
-
-" Yay, pass source=true if you want to build from source
-Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
-
 call plug#end()
 
 " Enable Glaive to support Codefmt
-call glaive#Install()
-Glaive codefmt plugin[mappings]
+" call glaive#Install()
+" Glaive codefmt plugin[mappings]
 
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
