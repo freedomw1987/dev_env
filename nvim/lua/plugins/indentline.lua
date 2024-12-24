@@ -1,7 +1,9 @@
 return {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
+  "lukas-reineke/indent-blankline.nvim",
+  config = function()
+    require("indent_blankline").setup {
+      show_current_context = true,
+      show_current_context_start = true,
+    }
+  end
 }

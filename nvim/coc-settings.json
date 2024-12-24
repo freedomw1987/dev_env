@@ -9,9 +9,11 @@
     "handlebars",
     "less",
     "prisma",
-    "proto"
+    "proto",
+    "lua"
   ],
   "tailwindCSS.headwind.runOnSave": true,
   "snippets.ultisnips.pythonPrompt": false,
-  "colors.enable": true
+  "colors.enable": true,
+  "Lua.format.enable": true
 }

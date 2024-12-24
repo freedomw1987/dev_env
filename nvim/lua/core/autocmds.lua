@@ -1,6 +1,5 @@
-local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
-local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
-
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 autocmd("FileType", {
   pattern = "*",
@@ -11,7 +10,7 @@ autocmd("BufEnter", {
   command = "syntax sync fromstart",
 })
 
-local autoformat_settings = augroup("autoformat_settings", { clear = true })
+local autoformat_group = augroup("autoformat_settings", { clear = true })
 autocmd("FileType", {
   group = autoformat_group,
   pattern = "c,cpp,proto,java",
