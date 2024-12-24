@@ -1,7 +1,34 @@
 return {
   'google/vim-codefmt',
+  enabled = false,
   dependencies = {
     'google/vim-maktaba',
     'google/vim-glaive'
   },
+  config = function()
+    local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+    local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
+    local autoformat_group = augroup("autoformat_settings", { clear = true })
+    autocmd("FileType", {
+      group = autoformat_group,
+      pattern = "c,cpp,proto,java",
+      command = "AutoFormatBuffer clang-format",
+    })
+    autocmd("FileType", {
+      group = autoformat_group,
+      pattern = "javascriptreact,typescriptreact,yaml,lua",
+      command = "AutoFormatBuffer prettier",
+    })
+    autocmd("FileType", {
+      group = autoformat_group,
+      pattern = "css,less,scss",
+      command = "AutoFormatBuffer js-beautify",
+    })
+    autocmd("FileType", {
+      group = autoformat_group,
+      pattern = "sh",
+      command = "AutoFormatBuffer shfmt",
+    })
+  end
 }
