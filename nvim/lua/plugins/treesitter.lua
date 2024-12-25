@@ -1,7 +1,8 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    "yggdroot/indentline"
+    "yggdroot/indentline",
+    'vim-syntastic/syntastic'
   },
   build = ':TSUpdate',
   config = function()
