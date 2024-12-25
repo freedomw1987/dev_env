@@ -16,10 +16,14 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      'saghen/blink.cmp'
+    },
     config = function()
-      require("lspconfig").lua_ls.setup({})
-      require("lspconfig").pyright.setup({})
-      require("lspconfig").ts_ls.setup({})
+      local blinkcmp = require('blink.cmp')
+      require("lspconfig").lua_ls.setup(blinkcmp.get_lsp_capabilities({}))
+      require("lspconfig").pyright.setup(blinkcmp.get_lsp_capabilities({}))
+      require("lspconfig").ts_ls.setup(blinkcmp.get_lsp_capabilities({}))
     end,
   },
   -- lint

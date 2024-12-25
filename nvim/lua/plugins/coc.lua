@@ -1,7 +1,6 @@
 return {
   "neoclide/coc.nvim",
   branch = "release",
-  enabled = false,
   config = function()
     local function CheckBackspace()
       local col = vim.fn.col('.') - 1
@@ -25,6 +24,7 @@ return {
       "coc-flutter",
       "coc-lua",
     }
+
     vim.keymap.set('i', '<Tab>',
       function()
         if vim.fn['coc#pum#visible']() == 1 then

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-brew install fzf bat ripgrep the_silver_searcher perl universal-ctags tmux vim neovim git koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+brew install fzf fd bat ripgrep the_silver_searcher perl universal-ctags tmux vim neovim git koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 brew install clang-format js-beautify shfmt yamlfmt stylelint prettier htmlq stylua
 sudo npm install -g lessc swagger-ui-watcher @olrtg/emmet-language-server
 

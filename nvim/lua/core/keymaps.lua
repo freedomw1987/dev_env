@@ -3,7 +3,7 @@
 --------------------------------------------------------------
 ---
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap=true, silent=true }
+  local options = { noremap = true, silent = true }
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
@@ -50,10 +50,6 @@ map('n', '<leader>6', '6gt')
 -- Floaterm git
 map('n', '<leader>gg', ':FloatermNew --height=1.0 --width=1.0  lazygit<CR>')
 
--- FZF
-nmap('<leader>ff', ':GFiles<CR>')
-nmap('<leader>fw', ':Ag<CR>')
-
 -- Search
 nmap('<leader>rg', ':Rg<CR>')
 vim.keymap.set('', '/', '<Plug>(incsearch-forward)', { noremap = true, silent = true })
@@ -77,5 +73,4 @@ imap('jk', "<Esc>", { noremap = true })
 
 -- Copy and paste to clipboard
 vmap('<C-c>', '"+y', { noremap = true })
-map('', '<C-p>', '"+p', { noremap = true , silent = true })
-
+map('', '<C-p>', '"+p', { noremap = true, silent = true })

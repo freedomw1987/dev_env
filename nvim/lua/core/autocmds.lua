@@ -1,9 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
-autocmd("FileType", {
-  pattern = "*",
-  command = "AnyFoldActivate",
-})
 autocmd("BufEnter", {
   pattern = "*",
   command = "syntax sync fromstart",
