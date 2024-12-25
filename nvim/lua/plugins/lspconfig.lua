@@ -10,7 +10,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright", "ts_ls" },
+        ensure_installed = { "lua_ls", "pyright", "ts_ls", "eslint" },
       })
     end,
   },
@@ -74,6 +74,7 @@ return {
           protobuf = { "clang-format" },
           javascriptreact = { "prettier" },
           typescriptreact = { "prettier" },
+          typescript = { "prettier" },
           yaml = { "prettier" },
           json = { "prettier" },
           css = { "prettier" },

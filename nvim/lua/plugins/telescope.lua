@@ -6,7 +6,10 @@ return {
   },
   config = function()
     local theme = require('telescope.themes')
-    local opts = theme.get_ivy({})
+    local opts = theme.get_ivy({
+      hidden = true,
+      file_ignore_patterns = { "%node_modules/", "%.git/", "%.DS_Store", "composer.phar", "composer.lock" }
+    })
     local builtin = require('telescope.builtin');
     vim.keymap.set('n', '<leader>ff', function()
         builtin.find_files(opts)
