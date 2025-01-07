@@ -5,6 +5,11 @@ autocmd("BufEnter", {
   command = "syntax sync fromstart",
 })
 
+autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  command = "checktime",
+})
+
 autocmd({ "FileWritePost", "BufWritePost" }, {
   pattern = "*.less",
   callback = function()
