@@ -1,7 +1,7 @@
 local g = vim.g     -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped
 
-opt.redrawtime = 3000
+opt.redrawtime = 15000
 opt.hidden = true
 opt.encoding = 'UTF-8'
 opt.number = true
