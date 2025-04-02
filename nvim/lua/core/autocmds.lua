@@ -18,5 +18,8 @@ autocmd({ "FileWritePost", "BufWritePost" }, {
     if vim.fn.executable("lessc") == 1 then
       vim.fn.system("lessc " .. cwd .. "/" .. name .. ".less > " .. cwd .. "/" .. name .. ".css &")
     end
+    if vim.fn.executable("less") == 1 then
+      vim.fn.system("less " .. cwd .. "/" .. name .. ".less > " .. cwd .. "/" .. name .. ".css &")
+    end
   end,
 })

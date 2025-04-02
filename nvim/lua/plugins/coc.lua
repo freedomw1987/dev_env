@@ -23,6 +23,8 @@ return {
       "coc-docker",
       "coc-flutter",
       "coc-lua",
+      "coc-rls",
+      "coc-rust-analyzer"
     }
 
     vim.keymap.set('i', '<Tab>',
