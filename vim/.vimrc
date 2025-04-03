@@ -62,6 +62,8 @@ let g:coc_global_extensions= [
                   \"coc-prisma",
                   \"coc-docker",
                   \"coc-flutter",
+                  \"coc-rust-analyzer",
+                  \"coc-rls",
                   \]
 let g:codeium_disable_bindings=1
 " let g:fzf_action = { 'enter': 'tab split'  }
@@ -203,6 +205,8 @@ augroup autoformat_settings
   autocmd FileType javascriptreact,typescriptreact,yaml,lua AutoFormatBuffer prettier
   autocmd FileType css,less,scss AutoFormatBuffer js-beautify 
   autocmd FileType sh AutoFormatBuffer shfmt
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  autocmd FileType python AutoFormatBuffer yapf
 augroup END
 " Less compile
 autocmd FileWritePost,BufWritePost *.less :call LessCSSCompress()
