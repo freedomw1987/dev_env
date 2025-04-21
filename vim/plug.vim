@@ -21,7 +21,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'yggdroot/indentline'
 Plug 'haya14busa/incsearch.vim'
-Plug 'Exafunction/codeium.vim'
+Plug 'Exafunction/windsurf.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'dense-analysis/ale'
 Plug 'google/vim-maktaba'
