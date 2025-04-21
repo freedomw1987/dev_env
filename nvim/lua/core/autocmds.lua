@@ -5,6 +5,11 @@ autocmd("BufEnter", {
   command = "syntax sync fromstart",
 })
 
+autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  command = "checktime",
+})
+
 autocmd({ "FileWritePost", "BufWritePost" }, {
   pattern = "*.less",
   callback = function()
@@ -12,6 +17,9 @@ autocmd({ "FileWritePost", "BufWritePost" }, {
     local name = vim.fn.expand("<afile>:t:r")
     if vim.fn.executable("lessc") == 1 then
       vim.fn.system("lessc " .. cwd .. "/" .. name .. ".less > " .. cwd .. "/" .. name .. ".css &")
+    end
+    if vim.fn.executable("less") == 1 then
+      vim.fn.system("less " .. cwd .. "/" .. name .. ".less > " .. cwd .. "/" .. name .. ".css &")
     end
   end,
 })

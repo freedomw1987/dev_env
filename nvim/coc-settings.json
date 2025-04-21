@@ -10,7 +10,8 @@
     "less",
     "prisma",
     "proto",
-    "lua"
+    "lua",
+    "rust"
   ],
   "tailwindCSS.headwind.runOnSave": true,
   "snippets.ultisnips.pythonPrompt": false,

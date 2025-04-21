@@ -1,7 +1,7 @@
 local g = vim.g     -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped
 
-opt.redrawtime = 10000
+opt.redrawtime = 15000
 opt.hidden = true
 opt.encoding = 'UTF-8'
 opt.number = true
@@ -9,7 +9,6 @@ opt.relativenumber = true
 opt.termguicolors = true
 opt.background = 'dark'
 opt.mouse = 'a'
-opt.shiftwidth = 2
 opt.backspace = { 'indent', 'eol', 'start' }
 opt.foldlevel = 99
 opt.autoread = true
@@ -19,6 +18,9 @@ opt.laststatus = 3
 opt.clipboard = 'unnamedplus'
 opt.statusline:append('%#warningmsg#%{SyntasticStatuslineFlag()}%*')
 opt.expandtab = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
 
 
 g['tablineclosebutton'] = 1
