@@ -7,7 +7,19 @@ return {
   build = ':TSUpdate',
   config = function()
     require('nvim-treesitter.configs').setup {
-      ensure_installed = { "javascript", "typescript", "python", "json", "lua", "php", "rust" },
+      ensure_installed = {
+        "javascript",
+        "typescript",
+        "python",
+        "json",
+        "lua",
+        "php",
+        "rust",
+        "java",
+        "vimdoc",
+        "vimdoc",
+        "c"
+      },
       sync_install = false,
       auto_install = true,
       highlight = {
