@@ -25,8 +25,10 @@ shift + alt - left : yabai -m window --ratio abs:0.6;
 shift + alt - right : yabai -m window --ratio abs:0.4;
 
 # move window to display left and right
-shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
-shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
+shift + alt - a : yabai -m window --display west; yabai -m display --focus west;
+shift + alt - d : yabai -m window --display east; yabai -m display --focus east;
+shift + alt - w : yabai -m window --display north; yabai -m display --focus north;
+shift + alt - s : yabai -m window --display south; yabai -m display --focus south;
 
 # move window to space #
 shift + ctrl - 1 : yabai -m window --space 1;
