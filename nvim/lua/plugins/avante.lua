@@ -5,15 +5,20 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
-    provider = "azure",
-    azure = {
-      endpoint = "https://lemontree-openai.openai.azure.com/",
-      deployment = "gpt-4-david", -- Azure deployment name (e.g., "gpt-4o", "my-gpt-4o-deployment")
-      api_version = "2024-06-01",
-      timeout = 30000,            -- Timeout in milliseconds
-      temperature = 0,
-      max_tokens = 4096,
-    },
+    provider = "myazure",
+    providers = {
+      myazure = {
+        __inherited_from = "azure",
+        endpoint =
+        "https://david-mavw41p7-eastus2.cognitiveservices.azure.com/",
+        model = "model-router",
+        deployment = "model-router", -- Azure deployment name (e.g., "gpt-4o", "my-gpt-4o-deployment")
+        api_key_name = "AZURE_OPENAI_API_KEY",
+        api_version = "2024-12-01-preview",
+        timeout = 30000, -- Timeout in milliseconds
+        max_tokens = 8192,
+      },
+    }
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
