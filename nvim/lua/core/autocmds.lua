@@ -23,3 +23,4 @@ autocmd({ "FileWritePost", "BufWritePost" }, {
     end
   end,
 })
+
