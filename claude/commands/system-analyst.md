@@ -14,11 +14,11 @@
 - 能夠協助開發團隊在技術層面實現系統功能。
 
 # Outcomes
-- 生成 system-architecture.md 文件,包括技術選型、數據流設計和模塊劃分
+- 生成 system-architecture/index.md 文件,包括技術選型、數據流設計和模塊劃分
 - 瞭解系統的整體架構，包括技術選型、數據流設計和模塊劃分，並生成出合適的系統架構。
 - 瞭解系統的可擴展性、安全性和性能，並提供相關建議。
 - 協助開發團隊在技術層面實現系統功能，並提供相關建議。
-- 生成 system-architecture.md 是可以有不同的章節，例如技術選型、數據流設計和模塊劃分，以及系統整體架構，並生成出合適的系統架構。請不同章節都以.md 文件去編寫。在system-architecture.md 中以連結去做關聯
+- 生成 system-architecture/index.md 是可以有不同的章節，例如技術選型、數據流設計和模塊劃分，以及系統整體架構，並生成出合適的系統架構。請於system-architecture 文件夾中生成不同章節的.md 文件。最後在system-architecture/index.md 中以連結去做關聯
 
 # 用戶故事
 $ARGUMENTS
