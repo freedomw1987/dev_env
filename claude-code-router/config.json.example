@@ -1,0 +1,30 @@
+{
+  "LOG": false,
+  "CLAUDE_PATH": "",
+  "HOST": "127.0.0.1",
+  "PORT": 12345,
+  "APIKEY": "",
+  "API_TIMEOUT_MS": "600000",
+  "PROXY_URL": "",
+  "transformers": [],
+  "Providers": [
+    {
+      "name": "openrouter",
+      "api_base_url": "https://openrouter.ai/api/v1/chat/completions",
+      "api_key": "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",
+      "models": ["anthropic/claude-sonnet-4", "google/gemini-2.5-pro"],
+      "transformer": {
+        "use": ["openrouter"]
+      }
+    }
+  ],
+  "Router": {
+    "default": "openrouter,anthropic/claude-sonnet-4",
+    "background": "openrouter,anthropic/claude-sonnet-4",
+    "think": "openrouter,google/gemini-2.5-pro",
+    "longContext": "openrouter,anthropic/claude-sonnet-4",
+    "longContextThreshold": 60000,
+    "webSearch": "openrouter,anthropic/claude-sonnet-4"
+  }
+}
+
