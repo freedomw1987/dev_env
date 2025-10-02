@@ -1,6 +1,5 @@
 return {
   'hrsh7th/nvim-cmp',
-  enabled = false,
   event = "InsertEnter",
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
@@ -10,6 +9,7 @@ return {
     'hrsh7th/cmp-vsnip',
     'hrsh7th/vim-vsnip',
     'onsails/lspkind-nvim',
+    'luckasRanarison/tailwind-tools.nvim',
     -- 'L3MON4D3/LuaSnip',
     -- 'rafamadriz/friendly-snippets',
     -- 'saadparwaiz1/cmp_luasnip'
@@ -21,7 +21,7 @@ return {
     cmp.setup({
       formatting = {
         format = require("lspkind").cmp_format({
-          before = require("tailwind-tools.cmp").lspkind_format
+          before = require("tailwind-tools").lspkind_format
         }),
       },
       snippet = {
