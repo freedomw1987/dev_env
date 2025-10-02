@@ -22,9 +22,18 @@ return {
     },
     config = function()
       local blinkcmp = require('blink.cmp')
-      require("lspconfig").lua_ls.setup(blinkcmp.get_lsp_capabilities({}))
-      require("lspconfig").pyright.setup(blinkcmp.get_lsp_capabilities({}))
-      require("lspconfig").ts_ls.setup(blinkcmp.get_lsp_capabilities({}))
+      -- require("lspconfig").lua_ls.setup(blinkcmp.get_lsp_capabilities({}))
+      -- require("lspconfig").pyright.setup(blinkcmp.get_lsp_capabilities({}))
+      -- require("lspconfig").ts_ls.setup(blinkcmp.get_lsp_capabilities({}))
+      vim.lsp.config('lua_ls', {
+        opts = blinkcmp.get_lsp_capabilities({})
+      })
+      vim.lsp.config('pyright', {
+        opts = blinkcmp.get_lsp_capabilities({})
+      })
+      vim.lsp.config('ts_ls', {
+        opts = blinkcmp.get_lsp_capabilities({})
+      })
     end,
   },
   -- lint
