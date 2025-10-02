@@ -19,10 +19,17 @@ return {
   },
   opts = {
     workspaces = {
+      -- {
+      --   name = "obsidian-boardware",
+      --   path = "~/obsidian-boardware",
+      -- },
       {
-        name = "obsidian-boardware",
-        path = "~/obsidian-boardware",
-      },
+        name = "buf-parent",
+        path = function()
+          return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
+        end
+
+      }
     },
 
 
