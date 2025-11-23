@@ -26,4 +26,7 @@ yabai -m config mouse_action2 resize
 yabai -m mouse_drop_action swap
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+yabai -m rule --add app="^Bluebird$" manage=off
+
 sudo yabai --load-sa
