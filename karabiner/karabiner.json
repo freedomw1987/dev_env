@@ -59,6 +59,25 @@
                             "to": [{ "consumer_key_code": "volume_increment" }]
                         }
                     ]
+                },
+                {
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f1" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "brightness_down" }]
+                        },
+                        {
+                            "from": { "key_code": "f6" },
+                            "to": [{ "key_code": "f6" }]
+                        }
+                    ],
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        }
+                    ]
                 }
             ],
             "name": "Default profile",
