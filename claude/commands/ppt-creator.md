@@ -311,5 +311,9 @@ layout: end
 </div>
 ```
 
+# Constraints
+- 圖片要乎合文字及主題描述；
+
 # User Story
 $ARGUMENTS
+
