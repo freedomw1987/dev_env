@@ -312,7 +312,7 @@ layout: end
 ```
 
 # Constraints
-- 圖片要乎合文字及主題描述；
+- 圖片要乎合文字及主題描述, 避免離題的圖片;
 
 # User Story
 $ARGUMENTS
