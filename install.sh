@@ -3,6 +3,7 @@
 # Install Nvim related packages
 brew install fzf fd bat ripgrep the_silver_searcher perl universal-ctags tmux vim neovim git koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 brew install clang-format js-beautify shfmt yamlfmt stylelint prettier htmlq stylua
+brew install imagemagick
 sudo npm install -g lessc swagger-ui-watcher @olrtg/emmet-language-server eslint @anthropic-ai/claude-code @mermaid-js/mermaid-cli
 
 # Install spec-kit
