@@ -36,6 +36,9 @@ cd ~/.vim/bundle &&
 # Install Color-theme
 git clone https://github.com/lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
 
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.3.0 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+
 ln -s $(pwd)/.vimrc ~/.vimrc
 
 ln -s $(pwd)/coc-settings.json ~/.vim/coc-settings.json
